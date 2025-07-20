@@ -34,11 +34,7 @@ npm install livewire-select2-adapter
 Blade Component
 
 ```
-<select wire:model="selectedUser" data-select2-livewire>
-	<option value="">Select User</option>
-	@foreach($users as $user)
-		<option value="{{ $user->id }}">{{ $user->name }}</option>
-	@endforeach
+<select wire:model="userid" data-placeholder="Select User" data-select2-livewire>
 </select>
 ```
 
@@ -51,6 +47,42 @@ $(document).ready(function() {
 		width: '100%',
 	});
 });
+```
+
+Livewire Component Class
+
+```
+class User extends Component
+{
+    public $userid;
+
+    #[On('select2-query-userid')]
+    public function getUsers($term = null)
+    {
+        $this->skipRender();
+        $users = User::where('active', 1)->where('name', 'like', '%' . $term . '%')
+            ->get()
+            ->map(function ($user) {
+                return [
+                    'id' => $user->id,
+                    'text' => $user->name,
+                ];
+            })
+            ->toArray();
+
+        $this->dispatch('select2-results-userid', ['results' => $users]);
+    }
+
+    public function updatedUserId($id)
+    {
+        // Doing some stuff if user is selected
+    }
+
+    public function render()
+    {
+        return view('livewire.user');
+    }
+}
 ```
 
 The adapter will automatically handle Livewire morphing and syncing with `wire:model`.
