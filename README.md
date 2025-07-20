@@ -4,12 +4,12 @@ Seamless integration between [Laravel Livewire](https://laravel.livewire.com) an
 
 ### Features
 
-✅ Seamless Select2 and Livewire integration
-✅ Supports `wire:model` and `wire:model.live`
-✅ Customizable event names for queries and results
-✅ Auto re-initialize after Livewire morphs
-✅ Works with Livewire v3 and Select2 v4
-✅ Lightweight and dependency-free (except Select2 and jQuery)
+- Seamless Select2 and Livewire integration
+- Supports `wire:model` and `wire:model.live`
+- Customizable event names for queries and results
+- Auto re-initialize after Livewire morphs
+- Works with Livewire v3 and Select2 v4
+- Lightweight and dependency-free (except Select2 and jQuery)
 
 ---
 
@@ -34,8 +34,7 @@ npm install livewire-select2-adapter
 Blade Component
 
 ```
-<select wire:model="userid" data-placeholder="Select User" data-select2-livewire>
-</select>
+<select wire:model="userid" data-placeholder="Select User" data-select2-livewire></select>
 ```
 
 JavaScript Initialization
@@ -52,7 +51,7 @@ $(document).ready(function() {
 Livewire Component Class
 
 ```
-class User extends Component
+class Pos extends Component
 {
     public $userid;
 
