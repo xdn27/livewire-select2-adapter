@@ -1,0 +1,43 @@
+{
+  "name": "livewire-select2-adapter",
+  "version": "1.2.0",
+  "main": "dist/livewire-select2-adapter.umd.js",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "build:prod": "vite build --mode production",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xdn27/livewire-select2-adapter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xdn27/livewire-select2-adapter/issues"
+  },
+  "homepage": "https://github.com/xdn27/livewire-select2-adapter#readme",
+  "keywords": [
+    "livewire",
+    "select2",
+    "laravel",
+    "adapter"
+  ],
+  "author": {
+    "name": "Denisa Rachman",
+    "url": "https://github.com/xdn27"
+  },
+  "license": "MIT",
+  "description": "Enables seamless integration between Select2 and Laravel Livewire.",
+  "peerDependencies": {
+    "jquery": "^3.7.1",
+    "select2": "^4.1.0-rc.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
