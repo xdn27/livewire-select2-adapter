@@ -1,6 +1,6 @@
 /**
  * Livewire Select2 Adapter (xdn27)
- * Version: 1.2.0
+ * Version: 1.2.2
  * Enables seamless integration between Select2 and Laravel Livewire.
  *
  * @author

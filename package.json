@@ -1,6 +1,6 @@
 {
   "name": "livewire-select2-adapter",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "main": "dist/livewire-select2-adapter.umd.js",
   "files": [
     "src",

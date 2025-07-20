@@ -18,6 +18,7 @@ Seamless integration between [Laravel Livewire](https://laravel.livewire.com) an
 Download the script or use CDN in your HTML:
 
 ```
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/livewire-select2-adapter/dist/livewire-select2-adapter.umd.js"></script>
 ```
 
@@ -42,6 +43,7 @@ JavaScript Initialization
 ```
 $(document).ready(function() {
 	$('[data-select2-livewire]').select2({
+        dataAdapter: select2.LivewireModelAdapter,
 		theme: 'bootstrap4',
 		width: '100%',
 	});
@@ -94,6 +96,7 @@ You can customize Livewire behavior via:
 
 ```
 $('[data-select2-livewire]').select2({
+    dataAdapter: select2.LivewireModelAdapter,
 	livewire: {
 		eventName: 'select2-results-{wireModelName}', // default
 		emitName: 'select2-query-{wireModelName}', // default
